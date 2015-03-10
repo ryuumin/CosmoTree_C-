@@ -34,7 +34,7 @@
             // 
             // UserRegistration
             // 
-            this.UserRegistration.Location = new System.Drawing.Point(62, 38);
+            this.UserRegistration.Location = new System.Drawing.Point(83, 38);
             this.UserRegistration.Name = "UserRegistration";
             this.UserRegistration.Size = new System.Drawing.Size(400, 50);
             this.UserRegistration.TabIndex = 0;
@@ -44,7 +44,7 @@
             // 
             // LogIn
             // 
-            this.LogIn.Location = new System.Drawing.Point(62, 124);
+            this.LogIn.Location = new System.Drawing.Point(83, 125);
             this.LogIn.Name = "LogIn";
             this.LogIn.Size = new System.Drawing.Size(400, 50);
             this.LogIn.TabIndex = 1;
