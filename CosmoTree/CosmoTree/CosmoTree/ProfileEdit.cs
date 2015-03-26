@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace CosmoTree
 {
-    public partial class Form1 : Form
+    public partial class ProfileEdit : MyBaseForm
     {
-        public Form1()
+        public ProfileEdit(MyBaseForm f)
         {
+            parentForm = f;
             InitializeComponent();
         }
-
-        private void ユーザ登録_Click(object sender, EventArgs e)
+   
+        private void DisssionButton_Click(object sender, EventArgs e)
         {
 
         }

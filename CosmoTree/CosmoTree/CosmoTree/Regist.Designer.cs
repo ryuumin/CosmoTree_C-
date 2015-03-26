@@ -99,7 +99,7 @@
             this.Controls.Add(this.UserNameTextBox);
             this.Name = "Regist";
             this.Text = "Regist";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Regist_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MyBaseForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
