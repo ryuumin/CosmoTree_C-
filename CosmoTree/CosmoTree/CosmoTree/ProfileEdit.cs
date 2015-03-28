@@ -12,14 +12,24 @@ namespace CosmoTree
 {
     public partial class ProfileEdit : MyBaseForm
     {
-        public ProfileEdit(MyBaseForm f)
+        public ProfileEdit()
         {
-            parentForm = f;
             InitializeComponent();
         }
    
         private void DisssionButton_Click(object sender, EventArgs e)
         {
+            UpdateProfile();
+            //ページ遷移処理
+            MyPage myPage = new MyPage();
+            FormController.createForm(myPage, this);
+        }
+
+        private void UpdateProfile()
+        {
+            String url = "http://ecl.secret.jp/imazumi/C/EditProfile.php?UserName="+FormController.userName+"&Age="+AgeTextBox.Text;
+
+            string html = ServerController.sendMySQL(url);
 
         }
     }

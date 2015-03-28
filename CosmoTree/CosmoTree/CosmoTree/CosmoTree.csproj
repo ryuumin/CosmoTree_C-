@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FormController.cs" />
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,12 +74,25 @@
     <Compile Include="Regist.Designer.cs">
       <DependentUpon>Regist.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServerController.cs" />
+    <Compile Include="MyPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyPage.Designer.cs">
+      <DependentUpon>MyPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="TopPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TopPage.Designer.cs">
       <DependentUpon>TopPage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyBaseForm.resx">
+      <DependentUpon>MyBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProfileEdit.resx">
       <DependentUpon>ProfileEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,9 +108,13 @@
     <EmbeddedResource Include="Regist.resx">
       <DependentUpon>Regist.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyPage.resx">
+      <DependentUpon>MyPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TopPage.resx">
       <DependentUpon>TopPage.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

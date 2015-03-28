@@ -19,14 +19,11 @@ namespace CosmoTree
             InitializeComponent();
         }
 
-        public MyBaseForm(MyBaseForm parent)
-        {
-            InitializeComponent();
-            parentForm = parent;
-        }
-
-
         //これは各フォームで名前を変えて書かないといけない
+        /*
+        this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MyBaseForm_FormClosed);
+         * これを各フォームの.designerに追記する
+        */
         protected void MyBaseForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             //強制終了

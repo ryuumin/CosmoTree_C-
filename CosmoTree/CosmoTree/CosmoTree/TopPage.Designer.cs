@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Regist = new System.Windows.Forms.Button();
-            this.LogIn = new System.Windows.Forms.Button();
+            this.RegistButton = new System.Windows.Forms.Button();
+            this.LogInButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Regist
+            // RegistButton
             // 
-            this.Regist.Location = new System.Drawing.Point(31, 29);
-            this.Regist.Name = "Regist";
-            this.Regist.Size = new System.Drawing.Size(75, 23);
-            this.Regist.TabIndex = 0;
-            this.Regist.Text = "Regist";
-            this.Regist.UseVisualStyleBackColor = true;
-            this.Regist.Click += new System.EventHandler(this.Regist_Click);
+            this.RegistButton.Location = new System.Drawing.Point(57, 51);
+            this.RegistButton.Name = "RegistButton";
+            this.RegistButton.Size = new System.Drawing.Size(94, 23);
+            this.RegistButton.TabIndex = 0;
+            this.RegistButton.Text = "RegistButton";
+            this.RegistButton.UseVisualStyleBackColor = true;
+            this.RegistButton.Click += new System.EventHandler(this.RegistButton_Click_1);
             // 
-            // LogIn
+            // LogInButton
             // 
-            this.LogIn.Location = new System.Drawing.Point(31, 74);
-            this.LogIn.Name = "LogIn";
-            this.LogIn.Size = new System.Drawing.Size(75, 23);
-            this.LogIn.TabIndex = 1;
-            this.LogIn.Text = "LogIn";
-            this.LogIn.UseVisualStyleBackColor = true;
-            this.LogIn.Click += new System.EventHandler(this.LogIn_Click);
+            this.LogInButton.Location = new System.Drawing.Point(57, 96);
+            this.LogInButton.Name = "LogInButton";
+            this.LogInButton.Size = new System.Drawing.Size(75, 23);
+            this.LogInButton.TabIndex = 1;
+            this.LogInButton.Text = "Login";
+            this.LogInButton.UseVisualStyleBackColor = true;
+            this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
             // 
             // TopPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1424, 772);
-            this.Controls.Add(this.LogIn);
-            this.Controls.Add(this.Regist);
+            this.Controls.Add(this.LogInButton);
+            this.Controls.Add(this.RegistButton);
             this.Name = "TopPage";
             this.Text = "TopPage";
             this.ResumeLayout(false);
@@ -67,7 +67,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Regist;
-        private System.Windows.Forms.Button LogIn;
+        private System.Windows.Forms.Button RegistButton;
+        private System.Windows.Forms.Button LogInButton;
+
     }
 }

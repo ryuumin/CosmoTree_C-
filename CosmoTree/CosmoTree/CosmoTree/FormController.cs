@@ -10,6 +10,7 @@ namespace CosmoTree
     class FormController
     {
         public static MyBaseForm topPage;
+        public static string userName;
 
         FormController() { 
         

@@ -17,10 +17,9 @@ namespace CosmoTree
     {
     //    Form parentForm;
 
-        public Regist(MyBaseForm parent)
+        public Regist()
         {
             InitializeComponent();
-            parentForm = parent;
         }
         /*
         private void Regist_FormClosed(object sender, FormClosedEventArgs e)
@@ -50,26 +49,19 @@ namespace CosmoTree
 
         private void CreateUser() 
         {
-            WebClient wc = new WebClient();
+            String url = "http://ecl.secret.jp/imazumi/C/CreateUser.php?UserName=" + UserNameTextBox.Text + "&Password=" + PasswordTextBox.Text + "&age=20";
 
-            //URLにパラメータをくっつける
-            Stream st = wc.OpenRead("http://ecl.secret.jp/imazumi/CreateUser/CreateUser.php?UserName=dddd&Password=dadfdsfa&age=20");
+            string html = ServerController.sendMySQL(url);
 
-            Encoding enc = Encoding.GetEncoding("Shift_JIS");
-            StreamReader sr = new StreamReader(st, enc);
-            string html = sr.ReadToEnd();
-            sr.Close();
-
-            st.Close();
-
-            //成功したら１が返ってくる
-            if (html == "1") {
+            //成功したら0が返ってくる
+            if (html == "0") {
                 ErrorMessageLabel.Text = "ユーザ登録に成功しました！";
+                FormController.userName = UserNameTextBox.Text;
                 //ページ遷移処理
-                ProfileEdit profile = new ProfileEdit(this);
+                ProfileEdit profile = new ProfileEdit();
                 FormController.createForm(profile, this);
             }else{
-                ErrorMessageLabel.Text = "ユーザ登録に失敗しました・・・";
+                ErrorMessageLabel.Text = "ユーザ登録に失敗しました・・・" + html;
             }
         }
     }
