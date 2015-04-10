@@ -20,6 +20,7 @@ namespace CosmoTree
         private void DisssionButton_Click(object sender, EventArgs e)
         {
             UpdateProfile();
+            FormController.age = Agelabel.Text;
             //ページ遷移処理
             MyPage myPage = new MyPage();
             FormController.createForm(myPage, this);
